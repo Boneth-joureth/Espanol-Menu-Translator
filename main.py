@@ -1,3 +1,4 @@
+#Importing Librarires
 from googletrans import Translator
 
 translator = Translator()
