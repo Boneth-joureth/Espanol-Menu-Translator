@@ -1,0 +1,5 @@
+dog 
+ cat 
+ food 
+ to drink 
+ Aadesh
