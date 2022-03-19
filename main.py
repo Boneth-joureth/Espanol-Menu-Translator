@@ -1,4 +1,4 @@
-#iteration 6
+#iteration 7
 
 #Importing Librarires
 
@@ -175,10 +175,10 @@ while len(transText) != val_calc2:
     val_calc2 = val_calc2 + 1
     preVal2.clear()
     
-    
-    
+print(inputList) #pre translated list
+print(transText) #post translated list
 print(final_val) #FINAL VAL = PRE VAL
-print(final_val2) #FINAL VAL = POST VAL
+print(final_val2) #FINAL VAL2 = POST VAL
 
 
 #################################################### calculates the value of the post translated words ####################################################
