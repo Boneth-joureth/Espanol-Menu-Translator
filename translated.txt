@@ -1,6 +1,6 @@
-dog 
- cat 
- food 
- to drink 
- Aadesh 
- The big house
+dog
+cat
+food
+to drink
+Aadesh
+The big house
