@@ -1,4 +1,4 @@
-#iteration 5
+#iteration 6
 
 #Importing Librarires
 
@@ -18,11 +18,19 @@ transText = 0 # translated text
 preVal = list() #value of words before translated as a list
 preLet = list() #letter thing
 val_calc = 0 #value of idk
+
+preVal2 = list() #value of words after translated as a list
+preLet2 = list() #letter thing 2
+val_calc2 = 0 #value of idk 2
 #counters
 c1 = 0
+c2 = 0
 #Lists
 list_int = list() # pre val summed up
 final_val = list() #pre traslated total val each word into own list
+
+list_int2 = list() # post val summed up
+final_val2 = list() #post traslated total val each word into own list
 
 #################################################### translates the words and puts them into another file neatly ####################################################
 
@@ -68,8 +76,10 @@ for word in transText:
 #Close files
 inputWords.close
 transStore.close
-
+transRead.close
 #Aadesh testing to see if you can see this
+
+#inputList is the one with the pre translated words in a list
 
 
 #################################################### calculates the value of the pre translated words ####################################################
@@ -116,16 +126,62 @@ while len(inputList) != val_calc:
     final_val.append(list_int)
     
     val_calc = val_calc + 1
+    preVal.clear()
+#final_val has the list of values for pre translated words
     
 #################################################### calculates the value of the post translated words ####################################################
 
-print(final_val)
+while len(transText) != val_calc2:
+    for x in transText[0 + val_calc2]:
+        preLet2.append(ord(x) - 96)
+    
+    while len(preLet2) != c2:
+        
+        if preLet2[c2] == 1:
+            preVal2.insert(c2, "2")
+        elif preLet2[c2] == 5:
+            preVal2.insert(c2, "2")
+        elif preLet2[c2] == 9:
+            preVal2.insert(c2, "2")
+        elif preLet2[c2] == 15:
+            preVal2.insert(c2, "2")
+        elif preLet2[c2] == 21:
+            preVal2.insert(c2, "2")
+        elif preLet2[c2] == -52:
+            preVal2.insert(c2, "0") #for commas
+        elif preLet2[c2] == -64:
+            preVal2.insert(c2, "0") #for spaces
+        elif preLet2[c2] == 137:
+            preVal2.insert(c2, "2") # é
+        elif preLet2[c2] == 129:
+            preVal2.insert(c2, "2") # á
+        elif preLet2[c2] == 141:
+            preVal2.insert(c2, "2") # í
+        elif preLet2[c2] == 147:
+            preVal2.insert(c2, "2") # ó
+        elif preLet2[c2] == 154:
+            preVal2.insert(c2, "2") # ú
+        else:
+            preVal2.insert(c2, "1")
+        c2 = c2 + 1
+    
+    #turn val into int
+    list_int2 = [int(i) for i in preVal2]
+    list_int2 = (sum(list_int2)) - list_int2[0]
+
+    # added value for 1 word
+    final_val2.append(list_int2)
+    
+    val_calc2 = val_calc2 + 1
+    preVal2.clear()
+    
+    
+    
+print(final_val) #FINAL VAL = PRE VAL
+print(final_val2) #FINAL VAL = POST VAL
 
 
-
-
-
-
+#################################################### calculates the value of the post translated words ####################################################
 
 
 #close Files
