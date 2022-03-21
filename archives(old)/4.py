@@ -6,16 +6,6 @@ from ntpath import join
 from re import I
 from typing import List
 import translators as ts
-from tkinter import *
-import tkinter as tk
-
-
-
-
-
-
-
-
 
 
 # Variables
@@ -196,5 +186,3 @@ print(final_val2) #FINAL VAL2 = POST VAL
 
 #close Files
 inputWords.close
-
-
