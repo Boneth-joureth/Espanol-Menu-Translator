@@ -4,7 +4,8 @@
 from ntpath import join
 from re import I
 from typing import List
-import translators as ts
+from googletrans import Translator as ts
+#import translators as ts
 #from tkinter import *
 #import tkinter as tk
 
@@ -35,7 +36,7 @@ final_val2 = list() #post traslated total val each word into own list
 inputList = inputWords.read().split("\n")
 
 #Translate the words in inputList
-transText = ts.google(inputData) # default: from_language='auto', to_language='en'
+transText = ts.translate(inputData) # default: from_language='auto', to_language='en'
 
 #seperate the texts
 transText = transText.split('\n')
