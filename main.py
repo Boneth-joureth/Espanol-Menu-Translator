@@ -5,8 +5,8 @@ from ntpath import join
 from re import I
 from typing import List
 import translators as ts
-from tkinter import *
-import tkinter as tk
+#from tkinter import *
+#import tkinter as tk
 
 # Variables
 inputWords = open("testWords.txt", "r")##@@ change testwords.txt into input.txt when ready to test with your own input.
