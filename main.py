@@ -5,7 +5,7 @@ from typing import List
 from googletrans import Translator
 
 #Open Necessary Files for Reading and Writing
-inputFile = open("testWords.txt", "w+")##@@ change testwords.txt into input.txt when ready to test with your own input.
+inputFile = open("testWords.txt", "r")##@@ change testwords.txt into input.txt when ready to test with your own input.
 outputFile = open("translated.txt", "w+") #Store the translated words in a txt file so you can access it when needed
 
 #Variable Definitions:
@@ -50,10 +50,10 @@ for word in inputWords:
 #Writes all results to the output file in a neat format:
 outputFile.write("English: \n")
 for i in range(len(inputWords)):
-    outputFile.write(inputWords[i] + " " + inputVals[i] + '\n')
+    outputFile.write(inputWords[i] + " " + str(inputVals[i]) + '\n')
 outputFile.write("\n Spanish: \n")
 for i in range(len(outputWords)):
-    outputFile.write(outputWords[i] + " " + outputVals[i] + '\n')
+    outputFile.write(outputWords[i] + " " + str(outputVals[i]) + '\n')
     
 #Closes files
 inputFile.close

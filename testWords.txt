@@ -1,6 +1,4 @@
 perro
 gato
-comida
-beber
-aadesh
-el grande casa
+casa
+rio
