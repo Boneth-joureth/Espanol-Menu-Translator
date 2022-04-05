@@ -5,8 +5,8 @@ from typing import List
 import translators as ts
 
 #Open Necessary Files for Reading and Writing
-inputFile = open("testWords.txt", "r")##@@ change testwords.txt into input.txt when ready to test with your own input.
-outputFile = open("translated.txt", "w+") #Store the translated words in a txt file so you can access it when needed
+inputFile = open("input.txt", "r")##@@ change testwords.txt into input.txt when ready to test with your own input.
+outputFile = open("output.txt", "w") #Store the translated words in a txt file so you can access it when needed
 
 #Variable Definitions:
 #These may be helpful if it is necessary to switch y between a vowel and a consonant, also just needed to 
@@ -26,7 +26,7 @@ outputVals = []
 def CountVal(word):
     val = 0
     for char in vowels:
-        val += word.count(char)*2
+        val += word.casefold().count(char)*2
     for char in consonants:
         val += word.casefold().count(char)
     return val
