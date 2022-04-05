@@ -2,7 +2,7 @@
 from ntpath import join
 from re import I
 from typing import List
-from googletrans import Translator
+import translators as ts
 
 #Open Necessary Files for Reading and Writing
 inputFile = open("testWords.txt", "r")##@@ change testwords.txt into input.txt when ready to test with your own input.
@@ -31,9 +31,6 @@ def CountVal(word):
         val += word.casefold().count(char)
     return val
 
-#Initializing Translator:
-translator = Translator()
-
 #Handle input parsing and letter counting:
 for word in inputFile.read().split("\n"):
     inputWords.append(word)
@@ -42,16 +39,16 @@ for word in inputFile.read().split("\n"):
 
 #Translates words to output and counts english word letters:
 for word in inputWords:
-    newWord = translator.translate(text='perro', src='es', dest='en').text
+    newWord = ts.google(word)
     outputWords.append(newWord)
     val = CountVal(newWord)
     outputVals.append(val)
 
 #Writes all results to the output file in a neat format:
-outputFile.write("English: \n")
+outputFile.write("Spanish: \n")
 for i in range(len(inputWords)):
     outputFile.write(inputWords[i] + " " + str(inputVals[i]) + '\n')
-outputFile.write("\n Spanish: \n")
+outputFile.write("English: \n")
 for i in range(len(outputWords)):
     outputFile.write(outputWords[i] + " " + str(outputVals[i]) + '\n')
     
