@@ -1,6 +1,11 @@
-dog
-cat
-food
-to drink
-Aadesh
-The big house
+English: 
+perro 7
+gato 6
+casa 6
+rio 5
+
+ Spanish: 
+dog 4
+cat 4
+House 8
+River 7
