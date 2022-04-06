@@ -11,7 +11,7 @@ outputFile = open("output.txt", "w+") #Store the translated words in a txt file 
 #Variable Definitions:
 #These may be helpful if it is necessary to switch y between a vowel and a consonant, also just needed to 
 #make things work correctly
-vowels = ['a', 'e', 'i', 'o', 'u']
+vowels = ['a', 'e', 'i', 'o', 'u','í','ó','ú','é']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 
 inputVals = []
@@ -41,11 +41,9 @@ for word in outputWords:
 #Writes all results to the output file in a neat format:
 outputFile.write("Spanish: \n")
 for i in range(len(inputWords)):
-    print(inputWords[i] + " " + str(inputVals[i]))
     outputFile.write(inputWords[i] + " " + str(inputVals[i]) + '\n')
 outputFile.write("English: \n")
 for i in range(len(outputWords)):
-    print(outputWords[i] + " " + str(outputVals[i]))
     outputFile.write(outputWords[i] + " " + str(outputVals[i]) + '\n')
     
 #Closes files
