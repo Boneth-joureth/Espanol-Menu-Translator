@@ -31,18 +31,22 @@ def CountVal(word):
         val += word.casefold().count(char)
     return val
 
+print(inputFile.read() + " at point 1")
 #Handle input parsing and letter counting:
 for word in inputFile.read().split("\n"):
     inputWords.append(word)
     val = CountVal(word)
     inputVals.append(val)
 
+print(inputFile.read() + " at point 2")
+transInput = inputFile.read()
+transOut = ts.google(transInput)
 #Translates words to output and counts english word letters:
-for word in inputWords:
-    newWord = ts.google(word)
-    outputWords.append(newWord)
-    val = CountVal(newWord)
-    outputVals.append(val)
+#for word in inputWords:
+    #newWord = ts.google(word)
+    #outputWords.append(newWord)
+    #val = CountVal(newWord)
+    #outputVals.append(val)
 
 #Writes all results to the output file in a neat format:
 outputFile.write("Spanish: \n")
