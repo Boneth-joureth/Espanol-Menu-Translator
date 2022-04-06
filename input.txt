@@ -1,5 +1,4 @@
 perro
 gato
-rio
 casa
-comida sabroso
+rio

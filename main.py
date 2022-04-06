@@ -6,7 +6,7 @@ import translators as ts
 
 #Open Necessary Files for Reading and Writing
 inputFile = open("input.txt", "r")##@@ change testwords.txt into input.txt when ready to test with your own input.
-outputFile = open("output.txt", "w") #Store the translated words in a txt file so you can access it when needed
+outputFile = open("output.txt", "w+") #Store the translated words in a txt file so you can access it when needed
 
 #Variable Definitions:
 #These may be helpful if it is necessary to switch y between a vowel and a consonant, also just needed to 
@@ -14,10 +14,7 @@ outputFile = open("output.txt", "w") #Store the translated words in a txt file s
 vowels = ['a', 'e', 'i', 'o', 'u']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 
-inputWords = []
 inputVals = []
-
-outputWords = []
 outputVals = []
 
 #Function Definitions:
@@ -31,29 +28,24 @@ def CountVal(word):
         val += word.casefold().count(char)
     return val
 
-print(inputFile.read() + " at point 1")
-#Handle input parsing and letter counting:
-for word in inputFile.read().split("\n"):
-    inputWords.append(word)
-    val = CountVal(word)
-    inputVals.append(val)
+inputString = inputFile.read()
+inputWords = inputString.split('\n')
+outputWords = ts.google(inputString).split('\n')
 
-print(inputFile.read() + " at point 2")
-transInput = inputFile.read()
-transOut = ts.google(transInput)
-#Translates words to output and counts english word letters:
-#for word in inputWords:
-    #newWord = ts.google(word)
-    #outputWords.append(newWord)
-    #val = CountVal(newWord)
-    #outputVals.append(val)
+for word in inputWords:
+    inputVals.append(CountVal(word))
+
+for word in outputWords:
+    outputVals.append(CountVal(word))
 
 #Writes all results to the output file in a neat format:
 outputFile.write("Spanish: \n")
 for i in range(len(inputWords)):
+    print(inputWords[i] + " " + str(inputVals[i]))
     outputFile.write(inputWords[i] + " " + str(inputVals[i]) + '\n')
 outputFile.write("English: \n")
 for i in range(len(outputWords)):
+    print(outputWords[i] + " " + str(outputVals[i]))
     outputFile.write(outputWords[i] + " " + str(outputVals[i]) + '\n')
     
 #Closes files

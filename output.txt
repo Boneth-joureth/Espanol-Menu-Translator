@@ -1,0 +1,10 @@
+Spanish: 
+perro 7
+gato 6
+casa 6
+rio 5
+English: 
+dog 4
+cat 4
+House 8
+River 7
