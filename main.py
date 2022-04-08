@@ -40,4 +40,8 @@ def Translate():
     inputFile.close
     outputFile.close
 
+def myTestFunc(input):
+    print(input)
+    return input
+
 Translate()
