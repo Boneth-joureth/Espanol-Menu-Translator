@@ -1,8 +1,5 @@
 Spanish: 
-perro 7
-gato 6
-casa 6
-rio 5
+ 0
 English: 
 dog 4
 cat 4
