@@ -1,4 +1,6 @@
+from fnmatch import translate
 from flask import Flask, request, jsonify, render_template
+import main
 
 # create the flask app
 app = Flask(__name__)
@@ -14,9 +16,10 @@ def home():
 def predict():
 
     # get the description submitted on the web page
-    a_description = request.form.get('myInput')
-    print(a_description)
-    return render_template('app_frontend.html', prediction_text=a_description)
+    wordString = request.form.get('myInput')
+    print(wordString)
+    translatorOutput = main.Translate(wordString)
+    return render_template('app_frontend.html', outputText=translatorOutput)
     #return 'Description entered: {}'.format(a_description)
 
 #@app.route('/prediction', methods=['GET', 'POST'])

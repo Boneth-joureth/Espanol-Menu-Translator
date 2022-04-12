@@ -3,7 +3,6 @@ from ntpath import join
 from re import I
 from typing import List
 import translators as ts
-
 #Variable Definitions:
 #These may be helpful if it is necessary to switch y between a vowel and a consonant, also just needed to 
 #make things work correctly
@@ -21,23 +20,19 @@ def CountVal(word):
         val += word.casefold().count(char)
     return val
 
-def Translate():
-    inputFile = open("input.txt", "r")
-    outputFile = open("output.txt", "w+")
+def Translate(inputString):
 
-    inputString = inputFile.read()
     inputWords = inputString.split('\n')
     outputWords = ts.google(inputString).split('\n')
+    outputString = ""
 
-    outputFile.write("Spanish: \n")
+    outputString += "Spanish: \n"
     for word in inputWords:
-        outputFile.write(word + " " + str(CountVal(word)) + '\n')
-    outputFile.write("English: \n")
+        outputString += word + " " + str(CountVal(word)) + '\n'
+    outputString += "English: \n"
     for word in outputWords:
-        outputFile.write(word + " " + str(CountVal(word)) + '\n')
+        outputString += word + " " + str(CountVal(word)) + '\n'
+    
+    return outputString
 
-    #Closes files
-    inputFile.close
-    outputFile.close
 
-Translate()
