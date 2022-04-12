@@ -5,9 +5,11 @@
 	  	<link rel="stylesheet" href="{{ url_for('static', filename='asset_code.css') }}">
 	</head>
 	<body>
-		<h1>Predict Code</h1>
+		<h1>Espanol-Menu-Translator</h1>
 
 			<form action="http://localhost:5000/predict" method="POST">
+				<textarea rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
+					<br/>
 				<label form="myInput">Description:</label>
 				<input type="text" id="myInput" name="myInput">
 				<button type="submit" class=cv_btn>Predict Code</button>
