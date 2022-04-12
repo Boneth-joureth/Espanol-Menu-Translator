@@ -8,3 +8,6 @@ To get started on collaborating:
 
 ## Libraries Used
 https://github.com/ssut/py-googletrans
+
+## Thanks to:
+https://github.com/foxnic/my_first_flask_app
