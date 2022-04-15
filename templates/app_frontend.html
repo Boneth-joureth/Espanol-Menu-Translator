@@ -10,14 +10,12 @@
 			<form action="http://localhost:5000/predict" method="POST">
 				<textarea id="myInput" name="myInput" rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
 					<br/>
-				<label form="myInput">Description:</label>
 				<!--<input type="text" id="myInput" name="myInput">-->
-				<button type="submit" class=cv_btn>Predict Code</button>
-
+				<button type="submit" class=cv_btn>Translate!</button>
 			</form>
 			<br>
 			<br>
-			Prediction: {{ outputText }}
+			<h3>Output: </h3> <pre>{{ outputText }}</pre>
 
 	</body>
 </html>

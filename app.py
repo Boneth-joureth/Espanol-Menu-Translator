@@ -19,6 +19,7 @@ def predict():
     wordString = request.form.get('myInput')
     print(wordString)
     translatorOutput = main.Translate(wordString)
+    print(translatorOutput)
     return render_template('app_frontend.html', outputText=translatorOutput)
     #return 'Description entered: {}'.format(a_description)
 
