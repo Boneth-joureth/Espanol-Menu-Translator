@@ -12,21 +12,17 @@
 		<div class="mainContentPanel">
 			<div id="inputCol">
 				<h1>Input Spanish Words Here:</h1>
-				<form action="https://espanol-menu-translator.herokuapp.com/predict" method="POST">
-					<textarea id="myInput" name="myInput" rows="5" cols="60" name="text" placeholder="Press enter between words"></textarea>
+				<form action="/predict" method="POST">
+					<textarea id="myInput" name="myInput" name="text" placeholder="Press enter between words"></textarea>
 					<!--Button Has to be within the form tag to function-->
 					<div id="buttonRow">
 						<button type="submit" class=cv_btn>Translate and Calculate</button>
 					</div>
 				</form>
 			</div>
-				<div id="outputCol">
+			<div id="outputCol">
+				<h3>Output:</h3> <pre>{{ outputText }}</pre>
 			</div>
 		</div>
-
-			
-			
-			<h3>Output: </h3> <pre>{{ outputText }}</pre>
-
 	</body>
 </html>

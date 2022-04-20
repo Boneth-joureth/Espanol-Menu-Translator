@@ -1,15 +1,38 @@
 body {
-  display: flex;
+  margin: 0px;
   flex: 1;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
 }
 
 header {
   flex: 1;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  justify-content: 'center';
+  align-items: 'center';
+  padding: 10px;
+  display: flex;
 }
 
 .mainContentPanel {
   flex: 5;
   flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  padding: 20px;
+}
+
+#inputCol {
+  flex: 1;
+  width: 50%;
+}
+
+#outputCol {
+  flex: 1;
+  width: 50%;
 }
 
 #buttonRow {
@@ -18,4 +41,16 @@ header {
 
 #myInput {
   resize: none;
+  flex: 1;
+  height: 300px;
+}
+
+button {
+  margin: 5px;
+  border-radius: 0px;
+  border: 2px solid white;
+  background-color:rgb(36, 36, 36);
+  font-size: 3vh;
+  color: white;
+  padding: 7px;
 }
