@@ -7,7 +7,7 @@ on new lines in input.txt into english and count the vowel and consonant totals 
 The main dependencies for this project are `flask`,`translate-api`, and `gunicorn`.
 
 ## Deployment and Testing
-The main dependencies for this project are `flask`,`translate-api`, and `gunicorn`.
+From the root of the project run `flask run`.
 
 ## Colaboration
 To get started on collaborating:
