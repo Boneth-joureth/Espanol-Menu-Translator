@@ -14,10 +14,9 @@ def home():
 # running the model, and displaying the prediction
 @app.route('/predict', methods=['GET','POST'])
 def predict():
-
     # get the description submitted on the web page
     wordString = request.form.get('myInput')
-    print(wordString)
+    #print(wordString)
     translatorOutput = main.Translate(wordString)
     print(translatorOutput)
     return render_template('app_frontend.html', outputText=translatorOutput)
