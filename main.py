@@ -8,8 +8,7 @@ import translators as ts
 #make things work correctly
 vowels = ['a', 'e', 'i', 'o', 'u','í','ó','ú','é']
 consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
-htmlInput = open("htmlInput.txt", "w")
-outputFile = open("output.txt", "w")
+
 
 #Function Definitions:
 
@@ -35,5 +34,7 @@ def Translate(inputString):
     outputString += "\n English: \n"
     for word in outputWords:
         outputString += word + " " + str(CountVal(word)) + '\n'
+
+    outputString = outputString.replace('\n', '<br>')
 
     return outputString
