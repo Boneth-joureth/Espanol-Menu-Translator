@@ -3,11 +3,12 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  	<link rel="stylesheet" href="{{ url_for('static', filename='asset_code.css') }}">
-		<Title>Calculate</Title>
+		<Title>Espanol Menu Translator</Title>
 	</head>
 	<body>
 		<header>
 			<h1>Spanish Menu Translator</h1>
+			<a href="https://github.com/Boneth-joureth/Espanol-Menu-Translator"><img alt="Link to Github" src="{{ url_for('static', filename='img/GitHub-Mark-32px.png') }}" width="32" height="32"></a>
 		</header>
 		<div class="mainContentPanel">
 			<div id="inputCol">
@@ -21,10 +22,10 @@
 				</form>
 			</div>
 			<div id="outputCol">
-				<h2>Output:</h2> 
-				<div id="outputTextBox">
-					<pre>{{ outputText }}</pre>
-				</div>
+				<h2>Output:</h2>
+				{% autoescape false %}
+					{{ outputText }}
+				{% endautoescape %}
 			</div>
 		</div>
 	</body>
