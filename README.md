@@ -1,7 +1,7 @@
 # [Espanol-Menu-Translator](https://espanol-menu-translator.herokuapp.com/)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Boneth-joureth/Espanol-Menu-Translator) ![GitHub issues](https://img.shields.io/github/issues/Boneth-joureth/Espanol-Menu-Translator) ![Website](https://img.shields.io/badge/website-deployed-success)
 
-A web app that translates words in Spanish and outputs the words in English with their respective vowel counts.
+A web app that takes words in Spanish and translates the words to English with their respective word values.
 
 ## Dependencies
 The main dependencies for this project are `flask`,`translate-api`, and `gunicorn`.
