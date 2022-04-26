@@ -1,19 +1,24 @@
+html {
+  height: 90%;
+}
+
 body {
   margin: 0px;
+  padding: 0px;
   flex: 1;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
+  height: 100%;
   display: flex;
+
 }
 
 header {
   flex: 1;
   background-color: rgb(36, 36, 36);
   color: white;
-  justify-content: 'center';
-  align-items: 'center';
-  padding: 10px;
+  align-items: center;
+  padding-left: 10px;
   display: flex;
 }
 
@@ -39,10 +44,36 @@ header {
   flex: 1;
 }
 
+#form {
+  height: 100%;
+}
+
 #myInput {
   resize: none;
   flex: 1;
-  height: 300px;
+  height: 80%;
+  width: 90%;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+#myInput:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+
+pre {
+  margin: 0px;
+}
+
+#outputTextBox {
+  border: 2px solid black;
+  height: 80%;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 button {
@@ -53,4 +84,9 @@ button {
   font-size: 3vh;
   color: white;
   padding: 7px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color:rgb(0, 0, 0);
 }

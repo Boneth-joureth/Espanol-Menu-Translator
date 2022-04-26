@@ -11,8 +11,8 @@
 		</header>
 		<div class="mainContentPanel">
 			<div id="inputCol">
-				<h1>Input Spanish Words Here:</h1>
-				<form action="/predict" method="POST">
+				<h2>Input Spanish Words Here:</h2>
+				<form action="/predict" method="POST" id="form">
 					<textarea id="myInput" name="myInput" name="text" placeholder="Press enter between words"></textarea>
 					<!--Button Has to be within the form tag to function-->
 					<div id="buttonRow">
@@ -21,7 +21,10 @@
 				</form>
 			</div>
 			<div id="outputCol">
-				<h3>Output:</h3> <pre>{{ outputText }}</pre>
+				<h2>Output:</h2> 
+				<div id="outputTextBox">
+					<pre>{{ outputText }}</pre>
+				</div>
 			</div>
 		</div>
 	</body>

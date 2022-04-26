@@ -28,10 +28,12 @@ def Translate(inputString):
 
     outputString += "Spanish: \n"
     for word in inputWords:
-        outputString += word + " " + str(CountVal(word)) + '\n'
+        outputString += word + " " + str(CountVal(word))
+        outputString += '\n'
     outputString += "English: \n"
     for word in outputWords:
-        outputString += word + " " + str(CountVal(word)) + '\n'
+        outputString += word + " " + str(CountVal(word))
+        outputString += '\n'
     
     return outputString
 
