@@ -22,7 +22,10 @@
 				</form>
 			</div>
 			<div id="outputCol">
-				<h3>Output:</h3> <pre>{{ outputText }}</pre>
+				<h3>Output:</h3>
+				{% autoescape false %}
+					{{ outputText }}
+				{% endautoescape %}
 			</div>
 		</div>
 	</body>
